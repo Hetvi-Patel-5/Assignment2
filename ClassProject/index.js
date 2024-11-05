@@ -6,7 +6,7 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200; //success response code
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hwelcome to new class!\n');
+  res.end('welcome to new class!\n');
 });
 
 server.listen(port, hostname, () => {
