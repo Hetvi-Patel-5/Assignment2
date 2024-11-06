@@ -9,6 +9,7 @@
   <!--CSS Files-->
   <link rel='stylesheet' href='/Content/app.css' />
   <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel='stylesheet' href="/@fortawesome/fontawesome-free/css/all.min.css" />
 </head>
 
 
@@ -22,23 +23,36 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          <a class="nav-link active" aria-current="page" href="/home"> <i class="fa-solid fa-house"></i> Home</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/about">About</a>
+          <a class="nav-link" aria-current="page" href="/about"> <i class="fa-solid fa-circle-info" ></i> About</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/Projects">Projects</a>
+          <a class="nav-link" aria-current="page" href="/Projects"> <i class="fa-solid fa-gears"></i> Projects</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/Contact">Contact Us</a>
+          <a class="nav-link" aria-current="page" href="/Contact"> <i class="fa-solid fa-address-book"></i> Contact me</a>
         </li>
+
     </div>
   </div>
 </nav>
-  <h1> Welcome to the <%= title %> Page</h1>
+
+<main> 
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Welcome to the <%= title %> Page</h1>
+    </div>
+  </div>
+</main>
+
   
 <!--Script Files-->
   <script src= "/Scripts/app.js"></script>
