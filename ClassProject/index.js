@@ -1,14 +1,26 @@
-const http = require('http');
+// require module
+var connect = require('connect')
+ 
+// create app
+var app = connect()
 
-const hostname = '127.0.0.1';
-const port = 3000;
+function Aboutme(req,res,next)
+{
+  res.setHeader('Content-Type', 'Text/Plain');
+  res.end('Hello World');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200; //success response code
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('welcome to new class!\n');
-});
+}
 
-server.listen(port, hostname, () => {
-  console.log('Server is running successfully on local host');
-});
+function Contactus(req,res,next)
+{
+  res.setHeader('Content-Type', 'Text/Plain');
+  res.end('Good Bye World');
+
+}
+
+app.use('/aboutme',Aboutme);
+app.use('/contactus',Contactus);
+app.listen(3000);
+console.log ('server is running on local host')
+
+
