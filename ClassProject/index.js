@@ -1,26 +1,15 @@
-// require module
-var connect = require('connect')
- 
-// create app
-var app = connect()
+const express = require('express')
+const app = express()
+const port = 3000;
 
-function Aboutme(req,res,next)
-{
-  res.setHeader('Content-Type', 'Text/Plain');
-  res.end('Hello World');
+app.get('/helloworld', (req, res) => {
+  res.send('Hello World!')
+})
 
-}
+app.get('/goodbyeworld', (req, res) => {
+  res.send('Good Bye World!')
+})
 
-function Contactus(req,res,next)
-{
-  res.setHeader('Content-Type', 'Text/Plain');
-  res.end('Good Bye World');
-
-}
-
-app.use('/aboutme',Aboutme);
-app.use('/contactus',Contactus);
-app.listen(3000);
-console.log ('server is running on local host')
-
-
+app.listen(port, () => {
+  console.log('Example app listening on port ${port}')
+})
