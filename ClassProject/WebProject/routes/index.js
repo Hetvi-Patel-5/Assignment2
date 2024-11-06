@@ -17,22 +17,22 @@ router.get('/home', function(req, res, next) {
 
 /* GET about page. */
 router.get('/about', function(req, res, next) {
-  res.render('index', { 
-    title: 'About'
+  res.render('about', { 
+    title: 'About me'
   });
 });
 
 /* GET Projects page. */
 router.get('/Projects', function(req, res, next) {
-  res.render('index', { 
-    title: 'Projects'
+  res.render('Projects', { 
+    title: 'My Recent Projects'
   });
 });
 
 /* GET Contact page. */
 router.get('/contact', function(req, res, next) {
-  res.render('index', { 
-    title: 'Contact Us'
+  res.render('contact', { 
+    title: 'Contact me'
   });
 });
 
